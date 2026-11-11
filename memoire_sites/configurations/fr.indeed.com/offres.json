@@ -1,0 +1,89 @@
+{
+  "structures": [
+    {
+      "nom": "offre d’emploi",
+      "conteneur": "div.cardOutline.result",
+      "repetitif": true,
+      "champs": [
+        {
+          "nom": "identifiant",
+          "selecteur": "a.jcs-JobTitle[data-jk]",
+          "attribut": "data-jk",
+          "exemple": "85f60f7e324ae626"
+        },
+        {
+          "nom": "titre",
+          "selecteur": "a.jcs-JobTitle span",
+          "attribut": "text",
+          "exemple": "Electromécanicien -Responsable d'équipe"
+        },
+        {
+          "nom": "lien",
+          "selecteur": "a.jcs-JobTitle",
+          "attribut": "href",
+          "exemple": "/pagead/clk?mo=r&ad=…"
+        },
+        {
+          "nom": "entreprise",
+          "selecteur": "[data-testid='company-name']",
+          "attribut": "text",
+          "exemple": "SOGEA ENVIRONNEMENT"
+        },
+        {
+          "nom": "lieu",
+          "selecteur": "[data-testid='text-location']",
+          "attribut": "text",
+          "exemple": "Vesoul (70)"
+        },
+        {
+          "nom": "salaire",
+          "selecteur": "[data-testid='attribute_snippet_testid salary-snippet-container']",
+          "attribut": "text",
+          "exemple": "De 28 000 € à 30 000 € par an"
+        },
+        {
+          "nom": "type de contrat ou autre caractéristique",
+          "selecteur": "[data-testid='attribute_snippet_testid']",
+          "attribut": "text",
+          "exemple": "CDI"
+        },
+        {
+          "nom": "indication de candidature simplifiée",
+          "selecteur": ".css-glvc6p",
+          "attribut": "text",
+          "exemple": "Candidature simplifiée"
+        },
+        {
+          "nom": "indication d’annonce",
+          "selecteur": ".underShelfFooter",
+          "attribut": "text",
+          "exemple": "Annonce"
+        }
+      ]
+    }
+  ],
+  "observations": [
+    "Les cartes d’offres sont répétées dans des éléments li ; div.cardOutline.result fournit un conteneur de carte observé.",
+    "data-jk fournit un identifiant utilisable pour distinguer ou dédupliquer les offres.",
+    "Le lien du titre peut être un lien de suivi publicitaire ; il ne constitue pas nécessairement l’URL directe de l’offre.",
+    "Les cartes partagent des éléments de métadonnées répétés, notamment salaire et caractéristiques. Certaines caractéristiques peuvent combiner plusieurs textes."
+  ],
+  "incertitudes": [
+    "Seuls les fragments transmis dans cette session ont été analysés ; cette configuration ne garantit pas la couverture de toutes les pages ni de toutes les variantes HTML du site.",
+    "Les classes générées telles que css-glvc6p peuvent varier ; leur stabilité est incertaine.",
+    "Le sélecteur de candidature simplifiée est fondé sur la structure observée et peut aussi inclure d’autres contenus de cette zone.",
+    "Le sélecteur des caractéristiques peut englober plusieurs valeurs et ne distingue pas toujours contrat, horaires et avantages.",
+    "Les champs salaire, entreprise ou lieu peuvent être absents selon l’offre."
+  ],
+  "metadata": {
+    "site": "fr.indeed.com",
+    "source_html": "C:\\Users\\Dell\\Desktop\\application\\Collecteur_Universel\\HTML\\captures\\fr.indeed.com\\003_Indeed\\multi_20261110_171751\\20261110_171927_0001.html",
+    "blocs_analyses": 18,
+    "blocs_disponibles": 18,
+    "analyse_complete": true,
+    "session_codex": "01a1c75f-bda4-75f0-b2cf-c21eddbec339"
+  },
+  "normalisation": {
+  "modele_lien": "https://fr.indeed.com/viewjob?jk={identifiant}"
+}
+}

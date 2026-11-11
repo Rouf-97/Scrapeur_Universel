@@ -1,0 +1,111 @@
+{
+  "structures": [
+    {
+      "nom": "offre de recherche",
+      "conteneur": "apec-recherche-card-resultat",
+      "repetitif": true,
+      "champs": [
+        {
+          "nom": "titre",
+          "selecteur": ".rod-offre-list-card-title",
+          "attribut": "text",
+          "exemple": "Technicien de maintenance machines-outils itinérant F/H"
+        },
+        {
+          "nom": "lien_detail",
+          "selecteur": "a.rod-offre-list-card",
+          "attribut": "href",
+          "exemple": "/candidat/recherche-emploi.html/emploi/detail-offre/179715255W?q=machines%20%C3%A9lectriques&page=1&selectedIndex=0"
+        },
+        {
+          "nom": "entreprise",
+          "selecteur": ".rod-offre-list-card-content-company p",
+          "attribut": "text",
+          "exemple": "Cabeo RH"
+        },
+        {
+          "nom": "lieu",
+          "selecteur": ".rod-offre-list-card-content-location",
+          "attribut": "text",
+          "exemple": "La Roche-sur-Foron - 74"
+        },
+        {
+          "nom": "description",
+          "selecteur": ".rod-offre-list-card-description",
+          "attribut": "text",
+          "exemple": "Notre client est une société spécialisée dans le domaine des machines-outils industrielles. Il recherche un Technicien de maintenance machines-outils H/F pour renforcer son équipe. Vos missions Rattaché(e) à l'équipe technique, vous intervenez principalement en atelier, avec ..."
+        },
+        {
+          "nom": "informations_complementaires",
+          "selecteur": ".rod-offre-list-card-tags .rod-tags",
+          "attribut": "text",
+          "exemple": "CDI"
+        },
+        {
+          "nom": "qualification",
+          "selecteur": ".rod-offre-list-card-tags-qualify",
+          "attribut": "text",
+          "exemple": "Qualifiée Apec"
+        },
+        {
+          "nom": "date_relative",
+          "selecteur": "a.rod-offre-list-card > p.rod-color-dark-blue",
+          "attribut": "text",
+          "exemple": "Il y a 4 jours"
+        }
+      ]
+    },
+    {
+      "nom": "carte de service",
+      "conteneur": ".rod-offre-services-item",
+      "repetitif": true,
+      "champs": [
+        {
+          "nom": "image",
+          "selecteur": ".rod-offre-services-img",
+          "attribut": "src",
+          "exemple": "/files/live/sites/www/files/xtra_components/jobboard/services_apec/visibilite_recruteurs_img.png"
+        },
+        {
+          "nom": "titre",
+          "selecteur": ".rod-offre-services-content-title h3",
+          "attribut": "text",
+          "exemple": "Rendez-vous visible des recruteurs !"
+        },
+        {
+          "nom": "description",
+          "selecteur": ".rod-offre-services-content > div > p",
+          "attribut": "text",
+          "exemple": "Avec le profil Apec vous augmentez votre visibilité auprès des recruteurs."
+        },
+        {
+          "nom": "picto",
+          "selecteur": ".rod-offre-services-content-img",
+          "attribut": "src",
+          "exemple": "/files/live/sites/www/files/xtra_components/jobboard/services_apec/visibilite_recruteurs_picto.svg"
+        }
+      ]
+    }
+  ],
+  "observations": [
+    "La liste d'offres est contenue dans .rod-offre-list et chaque carte observée utilise le conteneur apec-recherche-card-resultat avec un identifiant de la forme offer_card_0, offer_card_1, etc.",
+    "Le fragment indique 783 offres et montre la page 2 active d'une pagination allant jusqu'à 40.",
+    "Les tags d'une offre peuvent correspondre au contrat, au salaire, au télétravail ou à l'expérience ; leur présence et leur ordre varient selon la carte.",
+    "Certaines cartes n'ont pas d'image d'entreprise ou de qualification Apec.",
+    "La page contient aussi des filtres de recherche et une navigation, mais ils ne sont pas inclus comme structures répétitives de données principales."
+  ],
+  "incertitudes": [
+    "Le nombre de cartes observées dans le fragment ne représente pas nécessairement toutes les offres disponibles sur la page.",
+    "Le sélecteur de date relative cible le paragraphe de fin de carte observé ; son usage peut être ambigu si le balisage évolue.",
+    "Les exemples de description sont des extraits tronqués tels qu'observés dans le HTML.",
+    "Les champs contenus dans .rod-offre-list-card-tags ne portent pas d'étiquette distincte dans le balisage fourni ; leur interprétation dépend de leur texte."
+  ],
+  "metadata": {
+    "site": "www.apec.fr",
+    "source_html": "C:\\Users\\Dell\\Desktop\\application\\Collecteur_Universel\\HTML\\captures\\www.apec.fr\\001_Apec\\multi_20261110_171751\\20261110_171756_0001.html",
+    "blocs_analyses": 13,
+    "blocs_disponibles": 13,
+    "analyse_complete": true,
+    "session_codex": "01a1c9fd-3ef2-70e1-a113-1858509f455b"
+  }
+}

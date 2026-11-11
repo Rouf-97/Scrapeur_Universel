@@ -1,0 +1,87 @@
+{
+  "structures": [
+    {
+      "nom": "Annonce de recherche",
+      "conteneur": "li._5obUyG_adCard article",
+      "repetitif": true,
+      "champs": [
+        {
+          "nom": "titre",
+          "selecteur": "a[aria-label=\"Voir l’annonce\"]",
+          "attribut": "text",
+          "exemple": "Garmin fenix 7x sapphire solar 51"
+        },
+        {
+          "nom": "lien",
+          "selecteur": "a[aria-label=\"Voir l’annonce\"]",
+          "attribut": "href",
+          "exemple": "/ad/sport_plein_air/3299651399"
+        }
+      ]
+    },
+    {
+      "nom": "Image principale d’annonce",
+      "conteneur": "li._5obUyG_adCard article",
+      "repetitif": true,
+      "champs": [
+        {
+          "nom": "image",
+          "selecteur": "picture img",
+          "attribut": "src",
+          "exemple": "https://img.leboncoin.fr/api/v1/lbcpb1/images/d2/c3/b6/d2c3b68843c3c2c26f60ecf0a4e04b1a42e96ee9.jpg?rule=ad-thumb"
+        }
+      ]
+    },
+    {
+      "nom": "Lien de pagination",
+      "conteneur": "nav[data-spark-component=\"pagination\"]",
+      "repetitif": true,
+      "champs": [
+        {
+          "nom": "page suivante",
+          "selecteur": "a[data-spark-component=\"pagination-next-trigger\"]",
+          "attribut": "href",
+          "exemple": "/recherche?text=Garmin&page=2&ref_id=2c9d3249-4388-4eec-9b3c-bcf759d0a2aa"
+        }
+      ]
+    },
+    {
+      "nom": "Liens de catégories du pied de page SEO",
+      "conteneur": "#seoFooter",
+      "repetitif": true,
+      "champs": [
+        {
+          "nom": "libellé",
+          "selecteur": "a[data-spark-component=\"text-link\"]",
+          "attribut": "text",
+          "exemple": "Vélos"
+        },
+        {
+          "nom": "lien",
+          "selecteur": "a[data-spark-component=\"text-link\"]",
+          "attribut": "href",
+          "exemple": "/c/velos"
+        }
+      ]
+    }
+  ],
+  "observations": [
+    "La page observée est une recherche pour « Garmin » ; le titre JSON indique « Toute la France ». La pagination indique la page 1 sur 100 et les résultats sont répartis sur plusieurs catégories.",
+    "Les données intégrées dans __NEXT_DATA__ contiennent des annonces structurées, avec notamment identifiant, titre, prix, images, attributs, localisation et vendeur. Ce JSON constitue une source d’extraction distincte du DOM visible.",
+    "Les annonces répétées sont confirmées par li._5obUyG_adCard ; les insertions publicitaires observées sont des éléments distincts.",
+    "La pagination observée fournit des liens vers les pages suivantes."
+  ],
+  "incertitudes": [
+    "Le nom de classe _5obUyG_adCard est généré et peut changer ; sa stabilité n’est pas garantie.",
+    "Le sélecteur picture img vise l’image présente dans la carte ; le fragment ne permet pas de garantir qu’il s’agit toujours de l’image principale pour toutes les annonces.",
+    "Le fragment final confirme la structure de pagination et le lien vers la page 2, mais les valeurs d’annonces de __NEXT_DATA__ concernent uniquement les résultats observés dans les fragments transmis."
+  ],
+  "metadata": {
+    "site": "www.leboncoin.fr",
+    "source_html": "C:\\Users\\Dell\\Desktop\\application\\Collecteur_Universel\\HTML\\captures\\www.leboncoin.fr\\002_leboncoin\\multi_20261110_171751\\20261110_171824_0001.html",
+    "blocs_analyses": 32,
+    "blocs_disponibles": 32,
+    "analyse_complete": true,
+    "session_codex": "01a1ca17-cbbd-7521-8de6-9733011d19b4"
+  }
+}

@@ -1,0 +1,13 @@
+﻿__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+
+data/input/blocs/
+data/input/analyses_codex/
+data/input/inventaire.json
+data/extraction/
+data/final/
+
+*.log
